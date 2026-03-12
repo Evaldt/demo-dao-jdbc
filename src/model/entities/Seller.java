@@ -8,10 +8,10 @@ public class Seller implements Serializable {
 
     private static final long serialVersionUID= 1L;
 
-    private int id;
+    private Integer id;
     private String name;
     private String email;
-    private LocalDate bithDate;
+    private LocalDate birthDate;
     private double baseSalary;
 
     private Department department;
@@ -19,11 +19,11 @@ public class Seller implements Serializable {
     public Seller(){}
 
 
-    public Seller(Integer id, String name, String email, LocalDate bithDate, double baseSalary, Department department){
+    public Seller(Integer id, String name, String email, LocalDate birthDate, double baseSalary, Department department){
         this.id=id;
         this.name= name;
         this.email=email;
-        this.bithDate=bithDate;
+        this.birthDate=birthDate;
         this.baseSalary=baseSalary;
         this.department= department;
 
@@ -38,9 +38,7 @@ public class Seller implements Serializable {
         return this.name;
     }
 
-    public LocalDate getBithDate(){
-        return this.bithDate;
-    }
+    public LocalDate getBirthDate(){ return this.birthDate;}
 
     public double getBaseSalary() {
         return this.baseSalary;
@@ -50,6 +48,8 @@ public class Seller implements Serializable {
         return this.department;
     }
 
+    public String getEmail(){ return this.email;}
+
     public void setId(Integer id){
         this.id=id;
     }
@@ -58,12 +58,12 @@ public class Seller implements Serializable {
         this.name= name;
     }
 
-    public void setEmai(String email){
+    public void setEmail(String email){
         this.email= email;
     }
 
-    public void setBithDate(LocalDate bithDate){
-        this.bithDate= bithDate;
+    public void setBirthDate(LocalDate birthDate){
+        this.birthDate= birthDate;
     }
 
     public void setBaseSalary(double baseSalary){
@@ -92,7 +92,7 @@ public class Seller implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", bithDate=" + bithDate +
+                ", birthDate=" + birthDate +
                 ", baseSalary=" + baseSalary +
                 ", Department=" + department +
                 '}';
